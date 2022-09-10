@@ -1,10 +1,6 @@
 {
-  "PREFIX": "",
-  "TOKEN": "",
-  "ID_CHANNEL": "",
-  "TAG": "",
-  "ID_ROLE": "",
-  "ID_ROLE_REMOVE": "",
-  "STATUS": "",
-  "TYPE_STATUS": "PLAYING"
+  "PREFIX": "/",
+  "TOKEN": "MTAxNzQzNjk1MzM0MTMzMzU2NA.GuIP2y.m_c31FOkFf_1Xu0G_kjdLcJM5jyf-MUrusU_9U",
+  "STATUS": "hello I'm a Ray bot, I'm a bot made by Ray's",
+  "TYPE_STATUS": "STREAMING"
 }
