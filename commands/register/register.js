@@ -1,5 +1,4 @@
 const { MessageEmbed, Permissions } = require('discord.js');
-const { ID_CHANNEL, TAG, ID_ROLE, ID_ROLE_REMOVE } = require('../../util/config.json');
 
 module.exports = {
   name: 'register',
@@ -7,13 +6,13 @@ module.exports = {
   description: 'Ini Command register',
   async execute(message, args, client) {
     const nickname = args.join(' ');
-    const channel = await `${ID_CHANNEL}`;
-    const role = await `${ID_ROLE}`;
-    const roleremove = `${ID_ROLE_REMOVE}`;
-    const tag = await `${TAG}`;
+    const channel = await `1018028134307729448`;
+    const role = await `1017820846221434980`;
+    const roleremove = `1737368393`;
+    const tag = await `👤│`;
 
     if (message.channel.id != `${channel}`) {
-      const embed2 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription(`Kamu tidak bisa menggunakan command ini kecuali di <#${channel}>`);
+      const embed2 = new MessageEmbed().setColor('RED').setTitle('❌ • Error').setDescription(`kamu Menggunakan Command Ini Di Channel Yang Salah , Berikut Channel Yang Benar <#${channel}>`);
       return message.reply({ embeds: [embed2] });
     }
 
@@ -29,12 +28,12 @@ module.exports = {
 
     try {
       if (!message.member.permissions.has(Permissions.FLAGS.ADMINISTRATOR)) {
-        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accept**, ***Kamu sudah terverifikasi di server ${message.guild.name}***`).setTimestamp();
+        const embed = new MessageEmbed().setColor('RANDOM').setTitle('✅ • Success').setDescription(`${message.author} **Accepted**, Jangan Lupa Order Product Kami Ya!!!`).setTimestamp();
 
         if (!(await roleremove)) {
           await message.member.roles.add(`${role}`);
           if (await tag) {
-            await message.member.setNickname(`${tag} ${nickname}`);
+            await message.member.setNickname(`${tag}${nickname}`);
           } else {
             await message.member.setNickname(`${nickname}`);
           }
@@ -48,8 +47,7 @@ module.exports = {
           return message.reply({ embeds: [embed] });
         } else {
           await message.member.roles.add(`${role}`);
-          await message.member.roles.remove(`${roleremove}`);
-          await message.member.setNickname(`${tag} ${nickname}`);
+          await message.member.setNickname(`${tag}${nickname}`);
           return message.reply({ embeds: [embed] });
         }
       } else {
